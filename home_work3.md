@@ -3,6 +3,7 @@
 <h5> Awk /ɔːk/ /<h5>
 <h6> 1. What is the most frequent browser?</h6>
 <p>Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)</p>
+ <p> awk -F\" '{freq[$6]++} END {for (x in freq) {print freq[x], x}}' access.log | sort -rn | head</p>
 <h6> 2. Show number of requests per month for ip 216.244.66.230 (for example: Sep 2016 - 100500 reqs, Oct 2016 - 0 reqs, Nov 2016 - 2 reqs...)</h6>
 <p>grep "216.244.66.230" access.log | awk '{print $4}' | awk -F/ '{ print $2"/"$3 }' | awk -F: '{ print $1 }' |  uniq -c</p>
 <p>awk ' /216.244.66.230/ {print $4}' | awk -F/ '{ print $2"/"$3 }' | awk -F: '{ print $1 }' |  uniq -c</p>
