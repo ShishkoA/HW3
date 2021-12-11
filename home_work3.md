@@ -14,4 +14,5 @@
 sed -i 's/"Mozilla\/[0-9].[0-9]\([^"]*\).*/lynx/g' access.log
 <h6>2. Masquerade all ip addresses. Rewrite file.</h6>
 #sed 's/[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}/SOMETHING/g' access.log
-sed 's/^[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}/SOMETHING/g' access.log
+
+ sed 's/^[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}/SOMETHING/g' access.log
